@@ -2,5 +2,5 @@
 
 - name: Install iptraf-ng
   apt:
-    pkg: iptraf-ng 
+    pkg: iptraf-ng
     state: present
