@@ -1,0 +1,4 @@
+---
+
+- name: Install https
+  command: "cargo install https"

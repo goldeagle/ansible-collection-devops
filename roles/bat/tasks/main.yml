@@ -1,0 +1,4 @@
+---
+
+- name: Install bat
+  command: "cargo install bat"

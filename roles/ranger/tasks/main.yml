@@ -1,0 +1,6 @@
+---
+
+- name: Install ranger
+  apt:
+    name: ranger
+    state: present

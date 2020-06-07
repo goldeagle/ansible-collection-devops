@@ -1,0 +1,6 @@
+---
+
+- name: Install curl
+  apt:
+    pkg: curl
+    state: present

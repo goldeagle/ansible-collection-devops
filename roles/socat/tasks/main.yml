@@ -1,0 +1,6 @@
+---
+
+- name: Install socat
+  apt:
+    pkg: socat
+    state: present

@@ -1,0 +1,6 @@
+---
+
+- name: Install siege
+  apt:
+    pkg: siege
+    state: present
