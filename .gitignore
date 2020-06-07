@@ -112,3 +112,4 @@ GitHub.sublime-settings
 *.code-workspace
 
 /.test.yml
+/goldeagle-thinkphp-*.tar.gz
