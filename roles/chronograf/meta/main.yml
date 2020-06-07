@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: "bison 'goldeagle' fan"
-  description: "net-tools role"
+  description: "telegraf role"
   company: "bitseed.cn"
   license: "license (Apache-2.0)"
   min_ansible_version: 2.4
@@ -32,9 +32,7 @@ galaxy_info:
         - bionic
         - focal
   galaxy_tags:
-    - cli
-    - network
-    - ping
-    - tracert
-    - route
-    - "net-tools"
+    - agent
+    - metrics
+    - tick
+    - telegraf

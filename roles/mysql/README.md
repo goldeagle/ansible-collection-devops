@@ -1,8 +1,8 @@
-# Ansible Role: net-tools
+# Ansible Role: MariaDB
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
 
-Installs net-tools (https://www.mysql.com/) support on Linux.
+Installs MariaDB (https://www.mysql.com/) support on Linux.
 
 ## Requirements
 
@@ -18,9 +18,9 @@ NONE
 
 ## Example Playbook
 
-    - hosts: all
+    - hosts: dbservers
       roles:
-        - { role: goldeagle.mtr }
+        - { role: goldeagle.mariadb }
 
 ## License
 
