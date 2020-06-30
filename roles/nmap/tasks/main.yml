@@ -1,6 +1,0 @@
----
-
-- name: Install nmap
-  apt:
-    pkg: nmap
-    state: present

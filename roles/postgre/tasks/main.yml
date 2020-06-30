@@ -1,6 +1,0 @@
----
-
-- name: Install postgre
-  apt:
-    pkg: postgre
-    state: present

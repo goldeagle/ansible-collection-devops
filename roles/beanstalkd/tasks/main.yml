@@ -1,6 +1,0 @@
----
-
-- name: Install beanstalkd
-  apt:
-    pkg: beanstalkd
-    state: present
