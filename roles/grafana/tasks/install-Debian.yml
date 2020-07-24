@@ -20,6 +20,7 @@
   apt:
     deb: "/tmp/grafana.deb"
     state: present
+  notify: start grafana
 
 - name: Cleanup grafana deb file
   file:
