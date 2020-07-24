@@ -1,0 +1,6 @@
+---
+
+- name: Install neofetch
+  apt:
+    pkg: neofetch
+    state: present

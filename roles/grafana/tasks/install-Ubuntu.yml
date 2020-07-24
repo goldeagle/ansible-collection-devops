@@ -1,0 +1,26 @@
+---
+
+- name: Install deps
+  apt:
+    pkg: [
+      "adduser",
+      "libfontconfig1"
+    ]
+    state: present
+
+- name: Download deb file
+  get_url:
+    url: "{{ deb_url }}"
+    dest: "/tmp/grafana.deb"
+    mode: 0755
+    checksum: "sha:{{ sha256sum }}"
+
+- name: Install grafana
+  apt:
+    deb: "/tmp/grafana.deb"
+    state: present
+
+- name: Cleanup grafana deb file
+  file:
+    path: "/tmp/grafana.deb"
+    state: absent

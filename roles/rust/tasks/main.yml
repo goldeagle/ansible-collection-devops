@@ -1,4 +1,34 @@
 ---
 
-- name: Install mtr
-  yum: name=mtr state=present
+- name: Check if cargo is installed.
+  stat:
+    path: "/home/{{ ansible_user }}/.cargo/bin/cargo"
+  register: cargo_bin
+
+- name: Copy rust install script file
+  copy:
+    src: rustup-init.sh
+    dest: "/home/{{ ansible_user }}/"
+    mode: "0755"
+  when:
+    - not cargo_bin.stat.exists
+
+- name: Install rust
+  shell: "RUSTUP_UPDATE_ROOT={{ rust.rustup_update_root }} /home/{{ ansible_user }}/rustup-init.sh"
+  when:
+    - not cargo_bin.stat.exists
+
+- name: Remove rust install script
+  file:
+    path: "/home/{{ ansible_user }}/rust-init.sh"
+    state: absent
+  when:
+    - not cargo_bin.stat.exists
+
+- name: Set crates.io-index
+  copy:
+    src: config
+    dest: "/home/{{ ansible_user }}/.cargo/config"
+    mode: "0644"
+  when:
+    - not cargo_bin.stat.exists

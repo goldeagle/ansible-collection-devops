@@ -1,0 +1,6 @@
+[grafana]
+name=grafana
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/grafana/yum/rpm
+repo_gpgcheck=0
+enabled=1
+gpgcheck=0

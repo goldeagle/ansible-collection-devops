@@ -10,7 +10,6 @@ galaxy_info:
   platforms:
     - name: centos
       versions:
-        - 6
         - 7
     - name: debian
       versions:

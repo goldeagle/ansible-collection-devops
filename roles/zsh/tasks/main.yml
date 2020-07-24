@@ -1,0 +1,43 @@
+---
+
+- name: Check if zsh is installed.
+  stat:
+    path: "/usr/bin/zsh"
+  register: zsh_bin
+
+- name: Install zsh if not exists
+  apt:
+    pkg: zsh
+    state: present
+  when:
+    - not zsh_bin.stat.exists
+
+- name: Copy oh-my-zsh install script file
+  copy:
+    src: omz-install.sh
+    dest: "/home/{{ ansible_user }}/"
+    mode: 0755
+  when:
+    - zsh.install_oh_my_zsh
+    - not zsh_bin.stat.exists
+
+- name: Remove oh-my-zsh install script file
+  file:
+    path: "/home/{{ ansible_user }}/omz-install.sh"
+    state: absent
+  when:
+    - zsh.install_oh_my_zsh
+    - not zsh_bin.stat.exists
+
+- name: Install oh-my-zsh
+  command: "/home/{{ ansible_user }}/omz-install.sh"
+  when:
+    - zsh.install_oh_my_zsh
+    - not zsh_bin.stat.exists
+
+- name: copy zshrc
+  copy:
+    src: zshrc_example
+    dest: "/home/{{ ansible_user }}/.zshrc"
+  when:
+    - not zsh_bin.stat.exists

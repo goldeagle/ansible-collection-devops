@@ -1,0 +1,6 @@
+---
+
+- name: Install glances
+  apt:
+    pkg: glances
+    state: present

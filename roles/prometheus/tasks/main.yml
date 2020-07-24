@@ -1,1 +1,41 @@
 ---
+
+- name: Download tar file
+  get_url:
+    url: "{{ tar_url }}"
+    dest: "/tmp/prom.tar.gz"
+    mode: "0644"
+    checksum: "sha256:{{ sha256sum }}"
+
+- name: Install prometheus
+  unarchive:
+    src: "/tmp/prom.tar.gz"
+    dest: "/opt/"
+    remote_src: yes
+
+- name: Link promethues path
+  file:
+    src: "/opt/prometheus-{{ version }}.linux-amd64"
+    dest: "/usr/local/prometheus"
+    state: link
+  
+- name: Copy prometheus config files
+  copy:
+    src: "prometheus.yml"
+    dest: "/usr/local/prometheus/prometheus.yml"
+
+- name: Copy prometheus service file
+  copy:
+    src: "prometheus.service"
+    dest: "/usr/lib/systemd/system/prometheus.service"
+  notify: start prometheus
+
+- name: Cleanup prometheus tar file
+  file:
+    path: "/tmp/prom.tar.gz"
+    state: absent
+
+- name: Cleanup prometheus temp path
+  file:
+    path: "/tmp/prometheus-{{ version }}.linux-amd64"
+    state: absent
