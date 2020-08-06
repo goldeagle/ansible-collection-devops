@@ -1,4 +1,0 @@
----
-
-- name: Install vue
-  command: "npm install -g @vue/cli"

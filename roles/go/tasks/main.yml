@@ -1,4 +1,0 @@
----
-
-- name: Install mtr
-  yum: name=mtr state=present

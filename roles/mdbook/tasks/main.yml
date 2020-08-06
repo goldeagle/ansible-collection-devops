@@ -1,4 +1,0 @@
----
-
-- name: Install mdbook
-  command: "cargo install mdbook"

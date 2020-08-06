@@ -1,6 +1,0 @@
----
-
-version: "7.1.0"
-sha256sum: "0d55bb65cd9bcc6445555e304493240801bd8e84c54a693ae8a23f583b72018c"
-deb_url: "https://mirrors.tuna.tsinghua.edu.cn/grafana/apt/pool/main/g/grafana/grafana_7.1.0_amd64.deb"
-rpm_url: "https://mirrors.tuna.tsinghua.edu.cn/grafana/yum/rpm/grafana-7.1.0-1.x86_64.rpm"

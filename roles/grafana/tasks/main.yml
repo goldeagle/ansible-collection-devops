@@ -1,4 +1,0 @@
----
-
-- name: Install grafana by distribution
-  include_tasks: "install-{{ ansible_distribution }}.yml"

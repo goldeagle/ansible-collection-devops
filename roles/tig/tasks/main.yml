@@ -1,6 +1,0 @@
----
-
-- name: Install tig
-  apt:
-    pkg: tig
-    state: present
