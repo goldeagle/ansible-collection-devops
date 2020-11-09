@@ -1,10 +1,8 @@
 # Ansible Role: Https(crate)
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
-
 A cli command to run http service within a forlder.
 
-Installs Https(crate) (https://www.mysql.com/) support on Linux.
+Installs Https(crate) support on Linux.
 
 ## Requirements
 
@@ -22,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.crate_https }
+        - { role: goldeagle.devops.crate_https }
 
 ## License
 

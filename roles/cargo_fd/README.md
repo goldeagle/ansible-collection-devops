@@ -1,10 +1,8 @@
 # Ansible Role: fd
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
-
 A replacement of "find"
 
-Installs fd (https://www.mysql.com/) support on Linux.
+Installs fd-find support on Linux.
 
 ## Requirements
 
@@ -22,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.fd }
+        - { role: goldeagle.devops.cargo_fd }
 
 ## License
 

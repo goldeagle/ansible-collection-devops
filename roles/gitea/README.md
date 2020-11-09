@@ -1,8 +1,6 @@
-# Ansible Role: Mtr
+# Ansible Role: Gitea
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
-
-Installs Mtr (https://www.mysql.com/) support on Linux.
+Installs Gitea support on Linux.
 
 ## Requirements
 
@@ -20,7 +18,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.mtr }
+        - { role: goldeagle.devops.gitea }
 
 ## License
 

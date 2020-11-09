@@ -1,8 +1,8 @@
-# Ansible Role: Mtr
+# Ansible Role: Tokei
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
+A cli code line count tool.
 
-Installs Mtr (https://www.mysql.com/) support on Linux.
+Installs Tokei support on Linux.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.tokei }
+        - { role: goldeagle.devops.tokei }
 
 ## License
 

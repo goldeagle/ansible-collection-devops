@@ -1,8 +1,6 @@
-# Ansible Role: bat
+# Ansible Role: Neofetch
 
-A replacement of "cat"
-
-Installs bat support on Linux.
+Installs Neofetch support on Linux.
 
 ## Requirements
 
@@ -20,7 +18,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.devops.cargo_bat }
+        - { role: goldeagle.devops.neofetch }
 
 ## License
 

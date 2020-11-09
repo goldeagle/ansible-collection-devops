@@ -1,8 +1,8 @@
 # Ansible Role: Ranger
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
+A cli file manager.
 
-Installs Beanstalkd (https://www.mysql.com/) support on Linux.
+Installs Ranger support on Linux.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.ranger }
+        - { role: goldeagle.devops.ranger }
 
 ## License
 

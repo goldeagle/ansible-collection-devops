@@ -1,8 +1,8 @@
 # Ansible Role: Socat
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
+A cli socket cat tool.
 
-Installs Socat (https://www.mysql.com/) support on Linux.
+Installs Socat support on Linux.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.socat }
+        - { role: goldeagle.devops.socat }
 
 ## License
 

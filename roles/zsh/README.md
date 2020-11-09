@@ -1,8 +1,8 @@
-# Ansible Role: bat
+# Ansible Role: Zsh
 
-A replacement of "cat"
+Z shell.
 
-Installs bat support on Linux.
+Installs zsh support on Linux.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.devops.cargo_bat }
+        - { role: goldeagle.devops.mtr }
 
 ## License
 

@@ -1,8 +1,6 @@
-# Ansible Role: bat
+# Ansible Role: Glances
 
-A replacement of "cat"
-
-Installs bat support on Linux.
+Installs Glances (https://www.mysql.com/) support on Linux.
 
 ## Requirements
 
@@ -20,7 +18,7 @@ NONE
 
     - hosts: all
       roles:
-        - { role: goldeagle.devops.cargo_bat }
+        - { role: goldeagle.devops.glances }
 
 ## License
 

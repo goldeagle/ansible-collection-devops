@@ -1,8 +1,8 @@
 # Ansible Role: Siege
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-mysql)
+A cli web load benchmark tool.
 
-Installs Siege (https://www.mysql.com/) support on Linux.
+Installs Siege support on Linux.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ NONE
 
     - hosts: dashserver
       roles:
-        - { role: goldeagle.siege }
+        - { role: goldeagle.devops.siege }
 
 ## License
 
